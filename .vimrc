@@ -43,3 +43,14 @@ set hlsearch
 " opens previous file with 'Leader Leader'
 " default is 'Ctrl+^"
 nnoremap <Leader><Leader> :e#<CR>
+" NERDtree config
+" Open by default
+autocmd vimenter * NERDTree
+" but dont focus in automatically
+autocmd VimEnter * wincmd p
+" Show hidden files
+let NERDTreeShowHidden=1
+" Toggle tree display with 'Leader+n'
+nmap <leader>n :NERDTreeToggle<CR>
+" ignore these file type in the tree
+let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
